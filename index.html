@@ -16,14 +16,37 @@
 		body {
 			color:#4B92D1;
 			font-family:sans-serif;
+			
+		}
+		
+		.horz{
+		width:100%;
+		/* distribute horizontally */	
+display: -webkit-flex;
+display: flex;
+-webkit-flex-direction: row;
+flex-direction: row;
+-webkit-justify-content: space-between;
+justify-content: space-between;
+		}
+		
+		.vert{
+		/* distribute vertically */	
+display: -webkit-flex;
+display: flex;
+-webkit-flex-direction: column;
+flex-direction: column;
+-webkit-justify-content: space-between;
+justify-content: space-between;
 		}
 		
 	--></style>
 	
 </head>
-<body>
-
-	Hello World
+<body class='horz'>
+<div id='centralContainer' class='vert'>
+	Welcome to my world. Not much to see right now but it works.
+</div>
 	
 </body>
 
@@ -31,7 +54,7 @@
 	/* <![CDATA[ */
 	$(document).ready(function(){
 
-		$('body').append("<p>Thanks for visiting!");
+		$('#centralContainer').append("<p>Thanks for visiting!");
 	
 	
 	});
